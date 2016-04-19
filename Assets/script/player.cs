@@ -29,10 +29,10 @@ public class player : MonoBehaviour {
 	void Update () {
 
 		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
-			this.nextFire = Time.time + fireRate;
-			this._playerBulletTransform.position = new Vector2(this._transform.position.x + 80, this._transform.position.y - 10);
-			Instantiate (this.playerBullet);
-		}
+				this.nextFire = Time.time + fireRate;
+				this._playerBulletTransform.position = new Vector2 (this._transform.position.x + 80, this._transform.position.y - 10);
+				Instantiate (this.playerBullet);
+			}
 
 		this._currentPosition = this._transform.position;
 		this.inputx = Input.GetAxis ("Vertical");
@@ -82,4 +82,22 @@ public class player : MonoBehaviour {
 		SceneManager.LoadScene ("Level3");
 	}
 
+//<<<<<<< HEAD
+//=======
+//
+//	private void _CheckBoundary(){
+//		if (this.playerBullet.transform.position.x > this.transform.position.x + 500f) {
+//
+//			//this._transform.position = this._player.transform.position;
+//
+//			//this._currentPosition = this._transform.position;
+//			//this._currentPosition=new Vector2 (this._player.transform.position.x, 0f);
+//
+//			//	this._currentPosition =	this._transform.position;
+//			//	this.check = false;
+//			Destroy (this.playerBullet.gameObject);
+//		}
+//	}
+//
+//>>>>>>> upstream/master
 }

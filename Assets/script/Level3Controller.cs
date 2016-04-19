@@ -57,7 +57,7 @@ public class Level3Controller : MonoBehaviour {
 	private void _initiallizeObjects(){
 		Instantiate (this._playerController.gameObject);
 		this.bossLifeLabel.gameObject.SetActive (false);
-		this._bossLifeLine = 4;
+		this._bossLifeLine = 10;
 		this._warCryGameController = GameObject.Find ("WarCryGameContoller").GetComponent<WarCryGameController> ();
 		//this._playerController = GameObject.Find ("player").GetComponent<player> ();
 		for (int i = 0; i < 2; i++) {

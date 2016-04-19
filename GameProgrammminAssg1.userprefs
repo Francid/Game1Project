@@ -1,12 +1,25 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\script\PlayerCollider.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\script\playerBullets.cs">
     <Files>
-      <File FileName="Assets\script\PlayerCollider.cs" Line="1" Column="1" />
-      <File FileName="Assets\script\player.cs" Line="1" Column="1" />
-      <File FileName="Assets\script\GameController.cs" Line="1" Column="1" />
-      <File FileName="Assets\script\MenuSceneController.cs" Line="1" Column="1" />
+      <File FileName="Assets\script\player.cs" Line="35" Column="3" />
+      <File FileName="Assets\script\playerBullets.cs" Line="51" Column="32" />
+      <File FileName="Assets\script\dragon.cs" Line="28" Column="65" />
+      <File FileName="Assets\script\GameController.cs" Line="30" Column="2" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GameProgrammminAssg1" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="script" expanded="True">
+                <Node name="playerBullets.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

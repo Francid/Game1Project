@@ -10,6 +10,9 @@ public class WarCryGameController : MonoBehaviour
 	private int _scoreValue;
 	private int _livesValue;
 	private int _bkgResetCount;
+	private AudioSource[] _audioSources;
+	private AudioSource _gameMusic;
+	private AudioSource _gameOverMusic;
 
 	//PUBLIC INSTANCE VARIABLE
 	public Text scoreLabel;
@@ -65,6 +68,10 @@ public class WarCryGameController : MonoBehaviour
 		this.scorePanel.gameObject.SetActive (false);
 		this.gameOverPanel.gameObject.SetActive (false);
 
+		this._audioSources = this.gameObject.GetComponents<AudioSource> ();
+		this._gameMusic = this._audioSources [0];
+		this._gameOverMusic = this._audioSources [1];
+
 	}
 	
 	// Update is called once per frame
@@ -84,6 +91,8 @@ public class WarCryGameController : MonoBehaviour
 		this.menuPanel.gameObject.SetActive(false);
 		this.scorePanel.gameObject.SetActive(true);
 		SceneManager.LoadScene("main");
+		this._gameOverMusic.Stop ();
+		this._gameMusic.Play ();
 	}
 
 
@@ -113,6 +122,8 @@ public class WarCryGameController : MonoBehaviour
 		this.scorePanel.gameObject.SetActive(true);
 		this.gameOverPanel.SetActive (false);
 		this._initialize ();
+		this._gameMusic.Play ();
+		this._gameOverMusic.Stop ();
 		SceneManager.LoadScene ("main");
 	}
 
@@ -135,6 +146,8 @@ public class WarCryGameController : MonoBehaviour
 		this.gameOverPanel.gameObject.SetActive(true);
 		this.scorePanel.gameObject.SetActive (false);
 		this.highScoreLabel.text = this._scoreValue.ToString();
+		this._gameMusic.Stop ();
+		this._gameOverMusic.Play ();
 		SceneManager.LoadScene ("GameOver");
 	}
 }

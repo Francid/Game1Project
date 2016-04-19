@@ -12,7 +12,6 @@ public class Valcono : MonoBehaviour {
 
 	//public objects
 	public Transform _player;
-	public GameController _gameController;
 
 	// Use this for initialization
 	void Start () {
@@ -58,11 +57,7 @@ public class Valcono : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player") {
 			this._player.transform.position = new Vector2 (this._transform.position.x-2f, 0f);
-			//Destroy (other.gameObject);
-			this._gameController.LivesValue--;
 		}
-		Debug.Log ("hello");
-		//	this._lives--;
 	
 }
 }

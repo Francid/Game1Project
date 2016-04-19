@@ -4,14 +4,16 @@ using UnityEngine.SceneManagement;
 
 public class MenuSceneController : MonoBehaviour {
 
+	private AudioSource _menuMusic;
+
 	// Use this for initialization
 	void Start () {
-	
+		this._menuMusic = this.gameObject.GetComponent<AudioSource> ();
+		this._menuMusic.Play ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 
 	//Load Instruction Scene
