@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * Author: Francis, Avenet, 
+ * Last Modified by: Francis
+ * Last Modified: 20/04/2016
+ * File description: Moves the backgrounds
+*/
+
 public class IronmanController : MonoBehaviour {
 
 	//PRIVATE VARIABLES
@@ -63,6 +70,15 @@ public class IronmanController : MonoBehaviour {
 
 	}
 
+	void OnTriggerEnter2D (Collider2D other){
+
+		if (other.gameObject.CompareTag ("playerBullets")) {
+			Destroy(this.gameObject);
+			Destroy (other.gameObject);
+		}
+
+	}
+
 	IEnumerator EnemyBulletWaves(){
 		//yield return new WaitForSeconds (5);
 		float b = this._currentPosition.x - (this._currentPosition.x+100);
@@ -75,4 +91,5 @@ public class IronmanController : MonoBehaviour {
 			yield return new WaitForSeconds (2);
 		}
 	}
+
 }

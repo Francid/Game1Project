@@ -42,6 +42,10 @@ public class PlayerCollider : MonoBehaviour
 			this.blast.Play ();
 			this._WarCryGameController.LivesValue--;
 		}
+		if (other.gameObject.CompareTag ("AirGroundFire")) {
+			this._WarCryGameController.LivesValue--;
+			this.blast.Play ();
+		}
 		if (other.gameObject.CompareTag("Hing")) {
 			this.transform.position = new Vector2 (this._transform.position.x - 300,this._transform.position.y);
 			this._WarCryGameController.LivesValue--;

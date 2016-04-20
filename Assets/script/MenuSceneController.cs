@@ -9,7 +9,7 @@ public class MenuSceneController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this._menuMusic = this.gameObject.GetComponent<AudioSource> ();
-		this._menuMusic.Play ();
+		//this._menuMusic.Play ();
 	}
 	
 	// Update is called once per frame

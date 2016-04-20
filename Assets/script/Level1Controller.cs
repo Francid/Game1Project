@@ -3,11 +3,19 @@ using System.Collections;
 
 public class Level1Controller : MonoBehaviour {
 
+	/*
+ * Author: Francis, Avenet, 
+ * Last Modified by: Francis
+ * Last Modified: 20/04/2016
+ * File description: Moves the backgrounds
+*/
+
 	//PRIVATE VARIABLES
 	public GameObject miniEnemy;
 	public GameObject coins;
 
 	//PUBLIC VARIABLES
+
 
 	// Use this for initialization
 	void Start () {

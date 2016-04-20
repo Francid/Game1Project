@@ -2,6 +2,13 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+/*
+ * Author: Francis, Avenet, 
+ * Last Modified by: Francis
+ * Last Modified: 20/04/2016
+ * File description: Moves the backgrounds
+*/
+
 public class BackgroundMover : MonoBehaviour {
 
 	//PUBLIC VARIABLES

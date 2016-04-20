@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * Author: Francis, Avenet, 
+ * Last Modified by: Francis
+ * Last Modified: 20/04/2016
+ * File description: Moves the backgrounds
+*/
+
 public class BossEnemyController : MonoBehaviour {
 	
 	//PUBLIC VARIABLE

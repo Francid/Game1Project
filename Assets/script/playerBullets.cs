@@ -47,7 +47,7 @@ public class playerBullets : MonoBehaviour {
 		if (other.gameObject.CompareTag ("MiniEnemy")) 
 		{
 			Destroy (this.gameObject);
-			Destroy (other.gameObject);
+			//Destroy (other.gameObject);
 			this._WarCryGameController.ScoreValue += 20;
 		}
 

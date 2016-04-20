@@ -2,6 +2,14 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
+/*
+ * Author: Francis, Avenet, 
+ * Last Modified by: Francis
+ * Last Modified: 20/04/2016
+ * File description: Moves the backgrounds
+*/
+
 public class GameController : MonoBehaviour{
 	//private instance varialble
 	private int _scoreValue;

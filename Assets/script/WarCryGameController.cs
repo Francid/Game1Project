@@ -13,6 +13,7 @@ public class WarCryGameController : MonoBehaviour
 	private AudioSource[] _audioSources;
 	private AudioSource _gameMusic;
 	private AudioSource _gameOverMusic;
+	private int _scoreTracking;
 
 	//PUBLIC INSTANCE VARIABLE
 	public Text scoreLabel;
@@ -20,6 +21,7 @@ public class WarCryGameController : MonoBehaviour
 	public Text highScoreLabel;
 	public Text highScoreLabelText;
 	public Text gameOverLabel;
+	public Text levelLabel;
 
 	public GameObject canvas;
 	public GameObject scorePanel;
@@ -72,11 +74,22 @@ public class WarCryGameController : MonoBehaviour
 		this._gameMusic = this._audioSources [0];
 		this._gameOverMusic = this._audioSources [1];
 
+		this._scoreTracking = 0;
+
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			SceneManager.LoadScene ("main");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha2)) {
+			SceneManager.LoadScene ("Level2");
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha3)) {
+			SceneManager.LoadScene ("Level3");
+		}
 	
 	}
 
@@ -145,7 +158,10 @@ public class WarCryGameController : MonoBehaviour
 	public void _EndGame(){
 		this.gameOverPanel.gameObject.SetActive(true);
 		this.scorePanel.gameObject.SetActive (false);
-		this.highScoreLabel.text = this._scoreValue.ToString();
+		if (this._scoreTracking < this._scoreValue) {
+			this._scoreTracking = this._scoreValue;
+		}
+		this.highScoreLabel.text = this._scoreTracking.ToString();
 		this._gameMusic.Stop ();
 		this._gameOverMusic.Play ();
 		SceneManager.LoadScene ("GameOver");

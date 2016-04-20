@@ -1,5 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+/*
+ * Author: Francis, Avenet, 
+ * Last Modified by: Avenet
+ * Last Modified: 20/04/2016
+ * File description: Moves the backgrounds
+*/
 
 public class CameraFollow : MonoBehaviour {
 	public float xMax;

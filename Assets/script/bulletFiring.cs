@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * Author: Francis, Avenet, 
+ * Last Modified by: Francis
+ * Last Modified: 20/04/2016
+ * File description: Moves the backgrounds
+*/
+
 public class bulletFiring : MonoBehaviour {
 
 
@@ -36,5 +43,12 @@ public class bulletFiring : MonoBehaviour {
 		this._horizontalDrift = 5f;
 		this.enemy.activeInHierarchy.Equals (true);
 		this._transform.position = this.enemy.transform.position;
+	}
+
+	void OnTriggerEnter2D (Collider2D other){
+
+		if (other.gameObject.CompareTag ("Player")) {
+			this.Reset ();
+		}
 	}
 }

@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * Author: Francis, Avenet, 
+ * Last Modified by: Francis
+ * Last Modified: 20/04/2016
+ * File description: Moves the backgrounds
+*/
+
 public class GroundEnemyDestroy : MonoBehaviour {
 	public GameObject blast;
 	//private AudioSource[] audioSources;
@@ -22,15 +29,10 @@ public class GroundEnemyDestroy : MonoBehaviour {
 	
 	}
 	void OnTriggerEnter2D(Collider2D other){
-		//if(other.tag == "playerBullet"&& this.lives<0){
-		if(other.tag == "playerBullet"){
+
+		if(other.gameObject.CompareTag("playerBullets")){
 			Instantiate (blast, other.transform.position, other.transform.rotation);
 			this.lives -=1;
-			//Destroy (other.gameObject);
-			//Destroy (this.gameObject);
-			//this.explosion.Play();
 		}
-		//this.lives -= 1;
-
 	}
 }

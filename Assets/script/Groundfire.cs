@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * Author: Francis, Avenet, 
+ * Last Modified by: Francis
+ * Last Modified: 20/04/2016
+ * File description: Moves the backgrounds
+*/
+
 public class Groundfire : MonoBehaviour {
 
 	//PRIVATE INSTANCE VARIABLES
@@ -36,5 +43,12 @@ public class Groundfire : MonoBehaviour {
 		this._horizontalDrift = 7f;
 
 		this._transform.position = this.tank.transform.position;
+	}
+
+	void OnTriggerEnter2D (Collider2D other){
+
+		if (other.gameObject.CompareTag ("Player")) {
+			this.Reset ();
+		}
 	}
 }

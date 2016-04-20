@@ -1,14 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\script\playerBullets.cs">
-    <Files>
-      <File FileName="Assets\script\WarCryGameController.cs" Line="136" Column="19" />
-      <File FileName="Assets\script\PlayerCollider.cs" Line="32" Column="49" />
-      <File FileName="Assets\script\playerBullets.cs" Line="55" Column="30" />
-      <File FileName="Assets\script\BossEnemyBullet.cs" Line="35" Column="4" />
-      <File FileName="Assets\script\IronmanController.cs" Line="52" Column="104" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

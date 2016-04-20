@@ -3,6 +3,13 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/*
+ * Author: Francis, Avenet, 
+ * Last Modified by: Francis
+ * Last Modified: 20/04/2016
+ * File description: Moves the backgrounds
+*/
+
 public class Level3Controller : MonoBehaviour {
 
 	//PRIVATE VARIABLES
@@ -59,6 +66,7 @@ public class Level3Controller : MonoBehaviour {
 		this.bossLifeLabel.gameObject.SetActive (false);
 		this._bossLifeLine = 10;
 		this._warCryGameController = GameObject.Find ("WarCryGameContoller").GetComponent<WarCryGameController> ();
+		this._warCryGameController.levelLabel.text = "Level: 3";
 		//this._playerController = GameObject.Find ("player").GetComponent<player> ();
 		for (int i = 0; i < 2; i++) {
 			Instantiate (this.miniEnemys);
